@@ -96,10 +96,16 @@ void insere()
 		inicio = novo;
 	}
 
-	else {
-		fim = novo;
-		novo->prox = fim;
+	else if (inicio->prox == NULL) {
 		inicio->prox = fim;
+		fim = novo;
+	}
+
+	else {
+		novo->prox = fim;
+		fim = novo;
+		/*novo->prox = fim;*/
+		
 
 	}
 }
